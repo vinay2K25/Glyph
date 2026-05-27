@@ -6,6 +6,12 @@ A terminal-based text-editor written in C using the ncurses library.
 
 Glyph is currently an actively-evolving project focused on re-creating the core mechanics of modern text-editors without relying on high-level abstractions.
 
+The latest version now supports persistent file editing through a complete I/O work-flow, allowing users to:
+- Open existing files,
+- Create new files,
+- Edit contents dynamically,
+- Save changes directly from inside the editor
+
 The latest version includes:
 - Safe multi-line cursor navigation,
 - Dynamic text-insertion,
@@ -45,6 +51,17 @@ The latest version includes:
 - ncurses-based rendering pipeline
 - Manual cursor re-positioning
 - Dynamic terminal-refresh loop
+- Status-bar rendering
+- Real-time cursor position tracking
+
+### File Persistence
+- File-name prompt window during start-up
+- Automatic loading of existing file contents
+- Creation of new files if they do not exist
+- Ctrl + S support for saving files
+- Ctrl + Q support for graceful exit
+- Real-time save status messages
+- Persistent editing work-flow similar to real text-editors
 
 ## Tech Stack
 - **Language:** C
@@ -67,13 +84,20 @@ sudo apt install libncurses5-dev libncursesw5-dev
 
 2. Compile
 ```bash
-gcc 05SafeNavigation.c -lncurses
+gcc 06FilePersistence.c -lncurses
 ```
 
 3. Run
 ```bash
 ./a.out
 ```
+
+4. Usage
+- Enter file-name when prompted
+- Use arrow keys to navigate
+- Press:
+  - Ctrl + S - Save file
+  - Ctrl + Q - Quit editor
 
 ## Motivation
 
@@ -82,11 +106,11 @@ Glyph was built as a systems programming exercise to better understand how real-
 - Text-buffers
 - Cursor logic
 - Interactive keyboard-driven interfaces
+- File I/O handling
 
 Instead of depending on existing frameworks, the project intentionally re-implements these machanics from scratch using C and ncurses.
 
 ## Future Goals
-- File I/O support
 - Syntax highlighting
 - Vertical scrolling
 - Search functionality
