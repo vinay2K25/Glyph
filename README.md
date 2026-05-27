@@ -75,9 +75,9 @@ The latest version includes:
   - Processed Keyboard Input
   - Dynamic Screen Re-painting
 
- ## Building and Running
+## Building and Running
 
- 1. Install ncurses
+1. Install ncurses
 ```bash
 sudo apt install libncurses5-dev libncursesw5-dev
 ```
