@@ -1,6 +1,6 @@
 # Glyph
 
-A terminal-based text-editor written in C using the ncurses library.
+A terminal-based text-editor written in C using the ncurses, focused on re-building real editor internals from scratch.
 
 ## Current Development Status
 
@@ -20,6 +20,9 @@ The latest version includes:
 - In-between character insertion,
 - Full-screen re-rendering using ncurses,
 - Internal line-length tracking for accurate movement-constraints
+- Viewport-based vertical scrolling,
+- Dynamic visible-row rendering,
+- Cursor-tracking across off-screen content
 
 ## Features Implemented So Far
 
@@ -63,6 +66,14 @@ The latest version includes:
 - Real-time save status messages
 - Persistent editing work-flow similar to real text-editors
 
+### Viewport Scrolling
+- Vertical scrolling through large files
+- Dynamic top-visible-row tracking
+- Rendering only visible-portions of the text-buffer
+- Smooth cursor-following behaviour
+- Prevents cursor overlap with status-bar
+- Scroll-aware cursor positioning
+
 ## Tech Stack
 - **Language:** C
 - **Terminal UI:** ncurses
@@ -84,7 +95,7 @@ sudo apt install libncurses5-dev libncursesw5-dev
 
 2. Compile
 ```bash
-gcc 06FilePersistence.c -lncurses
+gcc 07ViewportScrolling.c -lncurses
 ```
 
 3. Run
@@ -112,7 +123,6 @@ Instead of depending on existing frameworks, the project intentionally re-implem
 
 ## Future Goals
 - Syntax highlighting
-- Vertical scrolling
 - Search functionality
 - Clip-board support
 - Multiple buffers
