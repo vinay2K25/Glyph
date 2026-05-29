@@ -22,7 +22,11 @@ The latest version includes:
 - Internal line-length tracking for accurate movement-constraints
 - Viewport-based vertical scrolling,
 - Dynamic visible-row rendering,
-- Cursor-tracking across off-screen content
+- Cursor-tracking across off-screen content,
+- Dynamic terminal-resize support,
+- Unsaved-changes tracking,
+- Exit confirmation dialogs,
+- Adaptive ncurses-based UI elements
 
 ## Features Implemented So Far
 
@@ -56,6 +60,9 @@ The latest version includes:
 - Dynamic terminal-refresh loop
 - Status-bar rendering
 - Real-time cursor position tracking
+- Dynamic terminal-resize handling
+- Viewport-aware rendering
+- Adaptive content margins
 
 ### File Persistence
 - File-name prompt window during start-up
@@ -65,6 +72,8 @@ The latest version includes:
 - Ctrl + Q support for graceful exit
 - Real-time save status messages
 - Persistent editing work-flow similar to real text-editors
+- Unsaved-changes detection
+- Exit confirmation for modified but unsaved files
 
 ### Viewport Scrolling
 - Vertical scrolling through large files
@@ -73,6 +82,14 @@ The latest version includes:
 - Smooth cursor-following behaviour
 - Prevents cursor overlap with status-bar
 - Scroll-aware cursor positioning
+
+### User Interface
+- Dynamically centered dialog windows
+- Responsive layout based on terminal size
+- Adaptive left-margin rendering
+- Color-coded status and warning messages
+- Visual unsaved-changes indicator
+- Improved status-bar design
 
 ## Tech Stack
 - **Language:** C
@@ -95,7 +112,7 @@ sudo apt install libncurses5-dev libncursesw5-dev
 
 2. Compile
 ```bash
-gcc 07ViewportScrolling.c -lncurses
+gcc 08UIFixes.c -lncurses
 ```
 
 3. Run
@@ -128,3 +145,4 @@ Instead of depending on existing frameworks, the project intentionally re-implem
 - Multiple buffers
 - Vim-style modal editing
 - Split-pane windows
+- Horizontal-scrolling
