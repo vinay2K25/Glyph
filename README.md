@@ -124,12 +124,12 @@ sudo apt install libncurses5-dev libncursesw5-dev
 
 2. Compile
 ```bash
-gcc 09HorizontalScrolling.c -lncurses
+make
 ```
 
 3. Run
 ```bash
-./a.out
+./glyph
 ```
 
 4. Usage
