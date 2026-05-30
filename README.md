@@ -19,14 +19,18 @@ The latest version includes:
 - Back-space merging,
 - In-between character insertion,
 - Full-screen re-rendering using ncurses,
-- Internal line-length tracking for accurate movement-constraints
+- Internal line-length tracking for accurate movement-constraints,
 - Viewport-based vertical scrolling,
 - Dynamic visible-row rendering,
 - Cursor-tracking across off-screen content,
 - Dynamic terminal-resize support,
 - Unsaved-changes tracking,
 - Exit confirmation dialogs,
-- Adaptive ncurses-based UI elements
+- Adaptive ncurses-based UI elements,
+- Viewport-based horizontal scrolling,
+- Dynamic visible-column rendering
+- Horizontal cursor-tracking across off-screen content
+- Two-dimensional viewport management
 
 ## Features Implemented So Far
 
@@ -91,6 +95,14 @@ The latest version includes:
 - Visual unsaved-changes indicator
 - Improved status-bar design
 
+### Horizontal Scrolling
+- Horizontal navigation through long-lines
+- Dynamic left-visible-column tracking
+- Rendering only visible-portions of long lines
+- Automatic viewport adjustment while typing
+- Viewport-aware cursor positioning
+- Smooth left/right scrolling behaviour
+
 ## Tech Stack
 - **Language:** C
 - **Terminal UI:** ncurses
@@ -112,7 +124,7 @@ sudo apt install libncurses5-dev libncursesw5-dev
 
 2. Compile
 ```bash
-gcc 08UIFixes.c -lncurses
+gcc 09HorizontalScrolling.c -lncurses
 ```
 
 3. Run
@@ -145,4 +157,4 @@ Instead of depending on existing frameworks, the project intentionally re-implem
 - Multiple buffers
 - Vim-style modal editing
 - Split-pane windows
-- Horizontal-scrolling
+- Line-numbers
