@@ -28,9 +28,12 @@ The latest version includes:
 - Exit confirmation dialogs,
 - Adaptive ncurses-based UI elements,
 - Viewport-based horizontal scrolling,
-- Dynamic visible-column rendering
-- Horizontal cursor-tracking across off-screen content
-- Two-dimensional viewport management
+- Dynamic visible-column rendering,
+- Horizontal cursor-tracking across off-screen content,
+- Two-dimensional viewport management,
+- Dynamic line-number rendering,
+- Gutter-based editor layout,
+- Colorized line-number display
 
 ## Features Implemented So Far
 
@@ -67,6 +70,8 @@ The latest version includes:
 - Dynamic terminal-resize handling
 - Viewport-aware rendering
 - Adaptive content margins
+- Gutter-based rendering layout
+- Independent rendering of editor meta-data
 
 ### File Persistence
 - File-name prompt window during start-up
@@ -102,6 +107,14 @@ The latest version includes:
 - Automatic viewport adjustment while typing
 - Viewport-aware cursor positioning
 - Smooth left/right scrolling behaviour
+
+### Line Numbers
+- Dynamic line-number rendering
+- Dedicated gutter region
+- Viewport aware numbering,
+- Colorized line-number display
+- Automatic numbering for loaded files
+- Line-number updates during insertion and deletion
 
 ## Tech Stack
 - **Language:** C
@@ -157,4 +170,3 @@ Instead of depending on existing frameworks, the project intentionally re-implem
 - Multiple buffers
 - Vim-style modal editing
 - Split-pane windows
-- Line-numbers
