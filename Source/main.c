@@ -6,12 +6,8 @@
 #define bufferRows 256
 #define bufferColumns 256
 #define maximumFileNameLength 60
-int min(int first, int second) {
-    if(first < second) {
-        return first;
-    }
-    return second;
-}
+
+#include "../Include/utils.h"
 
 // This function creates a temporary window, where-in the user is asked for a file name, and we open that file!
 // the file is created in-case it doesn't already exist!
