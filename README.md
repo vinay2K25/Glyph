@@ -145,7 +145,12 @@ make
 ./glyph
 ```
 
-4. Usage
+4. Clean Build Files
+```bash
+make clean
+```
+
+5. Usage
 - Enter file-name when prompted
 - Use arrow keys to navigate
 - Press:
