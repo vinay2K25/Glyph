@@ -1,0 +1,8 @@
+# Test text file(s)!
+*.txt
+
+# Build output!
+glyph
+
+# Object files!
+*.o 
